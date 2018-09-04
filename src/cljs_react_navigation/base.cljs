@@ -22,10 +22,10 @@
 
 ;; Navigators
 (defonce createNavigator (gobj/get ReactNavigation #js ["createNavigator"]))
-(defonce StackNavigator (gobj/get ReactNavigation #js ["StackNavigator"]))
-(defonce TabNavigator (gobj/get ReactNavigation #js ["TabNavigator"]))
-(defonce DrawerNavigator (gobj/get ReactNavigation #js ["DrawerNavigator"]))
-(defonce SwitchNavigator (gobj/get ReactNavigation #js ["SwitchNavigator"]))
+(defonce StackNavigator (gobj/get ReactNavigation #js ["createStackNavigator"]))
+(defonce TabNavigator (gobj/get ReactNavigation #js ["createBottomTabNavigator"]))
+(defonce DrawerNavigator (gobj/get ReactNavigation #js ["createDrawerNavigator"]))
+(defonce SwitchNavigator (gobj/get ReactNavigation #js ["createSwitchNavigator"]))
 
 ;; Routers
 (defonce StackRouter (gobj/get ReactNavigation #js ["StackRouter"]))
@@ -35,7 +35,6 @@
 (defonce Transitioner (gobj/get ReactNavigation #js ["Transitioner"]))
 (defonce CardStack (gobj/get ReactNavigation #js ["CardStack"]))
 (defonce DrawerView (gobj/get ReactNavigation #js ["DrawerView"]))
-(defonce TabView (gobj/get ReactNavigation #js ["TabView"]))
 
 (assert (and React ReactNavigation) "React and React Navigation must be installed.  Maybe NPM install them and restart the packager?")
 
